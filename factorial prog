@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class FactorialProgram {
+
+    public static void main(String[] args) {
+        // Create a scanner object for reading input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a non-negative integer
+        System.out.print("Enter a non-negative integer: ");
+        int n = scanner.nextInt();
+
+        // Validate the input
+        if (n < 0) {
+            System.out.println("Please enter a non-negative integer.");
+            scanner.close();
+            return;
+        }
+
+        // Calculate factorial
+        long factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+
+        // Display the result
+        System.out.println("The factorial of " + n + " is: " + factorial);
+        
+        // Close the scanner to free resources
+        scanner.close();
+    }
+}
