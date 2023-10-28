@@ -3,16 +3,13 @@ import java.util.Scanner;
 public class DecimalConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        // Taking input for the decimal number
+  
         System.out.print("Decimal Number: ");
         int decimalNumber = scanner.nextInt();
         
-        // Convert to binary
         String binaryNumber = Integer.toBinaryString(decimalNumber);
         System.out.println("Binary Number = " + binaryNumber);
 
-        // Convert to octal (just in case you want to check it in future)
         String octalNumber = Integer.toOctalString(decimalNumber);
         System.out.println("Octal Number = " + octalNumber);
     }
